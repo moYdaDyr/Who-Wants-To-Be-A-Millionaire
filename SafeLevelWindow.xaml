@@ -1,0 +1,20 @@
+﻿<Window x:Class="WpfApp3.SafeLevelWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3"
+        mc:Ignorable="d"
+        Title="SafeLevelWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Name="ChooseLevelText" Text="Выберите несгораемую сумму ниже:"/>
+        <ComboBox Grid.Row="1" Name="LevelSelector"/>
+        <Button Grid.Row="2" Name="ApplyLevelButton" Click="ApplyLevelButton_Click" Content="Принять несгораемую сумму"/>
+    </Grid>
+</Window>

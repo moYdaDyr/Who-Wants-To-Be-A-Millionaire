@@ -1,0 +1,39 @@
+﻿<Page x:Class="WpfApp3.GamePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp3"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="GamePage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Image Name="Logo" Grid.Column ="0" Grid.ColumnSpan="2" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Source="C:\Users\potor\source\repos\WpfApp3\WpfApp3\logo.jpg" StretchDirection="DownOnly"/>
+        <TextBlock Name="QuestionText" Grid.Column ="0" Grid.ColumnSpan="2" Grid.Row="1" TextWrapping="WrapWithOverflow"/>
+
+        <ScrollViewer Grid.Column ="2" Grid.Row="0">
+            <ListBox Name="CurrentLevelList"/>
+        </ScrollViewer>
+
+        <TextBlock Name="HintText" Grid.Column ="2" Grid.Row="1" Text="Подсказки:"/>
+        <ListBox Name="Hints"  Grid.Column ="2" Grid.Row="2" Grid.RowSpan="2"/>
+
+        <Button Name="Variant1Button" Grid.Column ="0" Grid.Row="2" Click="VariantButton_Click" CommandParameter="1"/>
+        <Button Name="Variant2Button" Grid.Column ="0" Grid.Row="3" Click="VariantButton_Click" CommandParameter="2"/>
+        <Button Name="Variant3Button" Grid.Column ="1" Grid.Row="2" Click="VariantButton_Click" CommandParameter="3"/>
+        <Button Name="Variant4Button" Grid.Column ="1" Grid.Row="3" Click="VariantButton_Click" CommandParameter="4"/>
+    </Grid>
+</Page>
